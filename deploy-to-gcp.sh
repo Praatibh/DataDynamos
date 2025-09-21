@@ -5,7 +5,7 @@ echo "🚀 TruthGuard AI - Google Cloud Deployment"
 echo "=========================================="
 
 # Set variables
-PROJECT_ID="truthguard-ai-$(date +%s)"
+PROJECT_ID="your_id"
 REGION="us-central1"
 
 echo "📝 Project ID: $PROJECT_ID"
