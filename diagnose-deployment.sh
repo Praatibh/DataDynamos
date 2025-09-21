@@ -4,7 +4,7 @@
 echo "🔍 TruthGuard AI - Deployment Diagnostics"
 echo "========================================="
 
-PROJECT_ID="truthguard-ai-1758454497"
+PROJECT_ID="your_id"
 
 # Check project
 echo "📋 Project Information:"
