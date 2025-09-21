@@ -4,7 +4,7 @@
 echo "🔧 Fixing TruthGuard AI Cloud Run Deployment"
 echo "============================================"
 
-PROJECT_ID="truthguard-ai-1758454497"
+PROJECT_ID="your_id"
 REGION="us-central1"
 
 # Set project
