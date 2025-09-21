@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthGuard AI - Advanced Misinformation Defense Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-icon">🛡️</div>
+                <span class="logo-text">TruthGuard AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#problem" class="nav-link">Crisis</a>
+                <a href="#detection" class="nav-link">AI Detection</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#technology" class="nav-link">Technology</a>
+                <a href="#community" class="nav-link">Community</a>
+            </div>
+            <button class="cta-button">
+                <span>Start Detection</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <div class="particle-system" id="particles"></div>
+            <div class="floating-elements">
+                <div class="floating-card fake-news">
+                    <div class="card-content">
+                        <div class="warning-badge">FAKE</div>
+                        <div class="card-text">Breaking News: False Information</div>
+                    </div>
+                </div>
+                <div class="floating-card deepfake">
+                    <div class="card-content">
+                        <div class="warning-badge">DEEPFAKE</div>
+                        <div class="card-text">Manipulated Video Detected</div>
+                    </div>
+                </div>
+                <div class="floating-card misinformation">
+                    <div class="card-content">
+                        <div class="warning-badge">MISLEADING</div>
+                        <div class="card-text">Health Misinformation Alert</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="title-primary">AI-Powered Defense</span>
+                    <span class="title-secondary">Against Misinformation</span>
+                </h1>
+                <p class="hero-description">
+                    Combat the spread of fake news, deepfakes, and misinformation with cutting-edge AI technology. 
+                    Protecting India's digital landscape with 96.8% accuracy and real-time detection.
+                </p>
+                
+                <div class="stats-ticker">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3800000000">0</div>
+                        <div class="stat-label">People Exposed Daily</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="890000000">0</div>
+                        <div class="stat-label">Indians Affected</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">x Faster Spread</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="primary-cta" id="startDetection">
+                        <span>Detect Misinformation Now</span>
+                        <div class="cta-glow"></div>
+                    </button>
+                    <button class="secondary-cta">
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="globe-container">
+                    <div class="globe" id="globe">
+                        <div class="globe-surface"></div>
+                        <div class="hotspot" style="top: 30%; left: 70%;" data-location="Delhi"></div>
+                        <div class="hotspot" style="top: 65%; left: 60%;" data-location="Mumbai"></div>
+                        <div class="hotspot" style="top: 70%; left: 65%;" data-location="Bangalore"></div>
+                        <div class="hotspot" style="top: 45%; left: 75%;" data-location="Chennai"></div>
+                        <div class="hotspot" style="top: 50%; left: 55%;" data-location="Hyderabad"></div>
+                    </div>
+                    <div class="globe-rings"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section id="problem" class="problem-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">The Misinformation Crisis</h2>
+                <p class="section-subtitle">Understanding the scale and impact of fake news in India</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="card-3d">
+                        <div class="card-face front">
+                            <div class="problem-icon">⚡</div>
+                            <h3>Speed of Spread</h3>
+                            <div class="metric-large">6x Faster</div>
+                            <p>Fake news spreads 6 times faster than true news on social platforms</p>
+                        </div>
+                        <div class="card-face back">
+                            <div class="detailed-stats">
+                                <div class="stat-row">
+                                    <span>WhatsApp</span>
+                                    <span>45% Share</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span>Facebook</span>
+                                    <span>28% Share</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span>Twitter</span>
+                                    <span>15% Share</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span>Others</span>
+                                    <span>12% Share</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="card-3d">
+                        <div class="card-face front">
+                            <div class="problem-icon">🎯</div>
+                            <h3>Impact Scale</h3>
+                            <div class="metric-large">890M</div>
+                            <p>Indians exposed to misinformation affecting democracy and health</p>
+                        </div>
+                        <div class="card-face back">
+                            <div class="impact-breakdown">
+                                <div class="impact-item">
+                                    <div class="impact-category">Election Manipulation</div>
+                                    <div class="impact-number">456K</div>
+                                </div>
+                                <div class="impact-item">
+                                    <div class="impact-category">Health Misinformation</div>
+                                    <div class="impact-number">789K</div>
+                                </div>
+                                <div class="impact-item">
+                                    <div class="impact-category">Financial Fraud</div>
+                                    <div class="impact-number">345K</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="card-3d">
+                        <div class="card-face front">
+                            <div class="problem-icon">🚀</div>
+                            <h3>Engagement Rate</h3>
+                            <div class="metric-large">1500%</div>
+                            <p>Higher engagement for false information compared to factual content</p>
+                        </div>
+                        <div class="card-face back">
+                            <div class="engagement-chart">
+                                <div class="chart-bar">
+                                    <div class="bar-label">Fake News</div>
+                                    <div class="bar-fill" style="width: 100%; background: #FF4444;"></div>
+                                    <div class="bar-value">100%</div>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar-label">Real News</div>
+                                    <div class="bar-fill" style="width: 6.7%; background: #00FF88;"></div>
+                                    <div class="bar-value">6.7%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="crisis-visualization">
+                <div class="crisis-chart-container">
+                    <canvas id="crisisChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Detection Interface -->
+    <section id="detection" class="detection-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">AI-Powered Detection Engine</h2>
+                <p class="section-subtitle">Advanced multimodal analysis with real-time verification</p>
+            </div>
+            
+            <div class="detection-interface">
+                <div class="detection-tabs">
+                    <button class="tab-button active" data-tab="text">
+                        <div class="tab-icon">📝</div>
+                        <span>Text Analysis</span>
+                    </button>
+                    <button class="tab-button" data-tab="image">
+                        <div class="tab-icon">🖼️</div>
+                        <span>Image Verification</span>
+                    </button>
+                    <button class="tab-button" data-tab="video">
+                        <div class="tab-icon">🎥</div>
+                        <span>Video Analysis</span>
+                    </button>
+                    <button class="tab-button" data-tab="audio">
+                        <div class="tab-icon">🎵</div>
+                        <span>Audio Detection</span>
+                    </button>
+                </div>
+                
+                <div class="detection-container">
+                    <div class="tab-content active" id="text-content">
+                        <div class="input-section">
+                            <div class="glass-container">
+                                <textarea 
+                                    placeholder="Paste the text content you want to verify..."
+                                    id="textInput"
+                                    rows="6"
+                                ></textarea>
+                                <button class="analyze-button" id="analyzeText">
+                                    <span>Analyze Content</span>
+                                    <div class="analyze-glow"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="image-content">
+                        <div class="upload-zone" id="imageUpload">
+                            <div class="upload-icon">📁</div>
+                            <div class="upload-text">
+                                <h3>Drop image here or click to upload</h3>
+                                <p>Supports JPG, PNG, WebP formats</p>
+                            </div>
+                            <input type="file" accept="image/*" hidden>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="video-content">
+                        <div class="upload-zone" id="videoUpload">
+                            <div class="upload-icon">🎬</div>
+                            <div class="upload-text">
+                                <h3>Drop video here or click to upload</h3>
+                                <p>Supports MP4, WebM, AVI formats</p>
+                            </div>
+                            <input type="file" accept="video/*" hidden>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="audio-content">
+                        <div class="upload-zone" id="audioUpload">
+                            <div class="upload-icon">🎙️</div>
+                            <div class="upload-text">
+                                <h3>Drop audio here or click to upload</h3>
+                                <p>Supports MP3, WAV, OGG formats</p>
+                            </div>
+                            <input type="file" accept="audio/*" hidden>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-panel" id="resultsPanel">
+                    <div class="results-content" id="resultsContent">
+                        <!-- Results will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Live Misinformation Dashboard</h2>
+                <p class="section-subtitle">Real-time monitoring and detection across India</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card large">
+                    <div class="card-header">
+                        <h3>Threat Hotspots</h3>
+                        <div class="live-indicator">
+                            <div class="pulse-dot"></div>
+                            <span>Live</span>
+                        </div>
+                    </div>
+                    <div class="india-map-container">
+                        <div class="india-map" id="indiaMap">
+                            <!-- Map will be generated dynamically -->
+                        </div>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <div class="legend-color critical"></div>
+                                <span>Critical Risk</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color high"></div>
+                                <span>High Risk</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color medium"></div>
+                                <span>Medium Risk</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color low"></div>
+                                <span>Low Risk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Trending Threats</h3>
+                    </div>
+                    <div class="threats-list" id="threatsList">
+                        <!-- Threats will be populated dynamically -->
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Detection Metrics</h3>
+                    </div>
+                    <div class="metrics-container">
+                        <div class="metric-item">
+                            <div class="metric-value" data-target="2340000">0</div>
+                            <div class="metric-label">Misinformation Stopped</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value" data-target="125000">0</div>
+                            <div class="metric-label">Daily Verifications</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">96.8%</div>
+                            <div class="metric-label">Accuracy Rate</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">0.8s</div>
+                            <div class="metric-label">Detection Speed</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Real-time Detections</h3>
+                    </div>
+                    <div class="detections-feed" id="detectionsFeed">
+                        <!-- Live feed will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Showcase -->
+    <section id="technology" class="technology-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Advanced AI Technology</h2>
+                <p class="section-subtitle">Powered by cutting-edge machine learning and blockchain verification</p>
+            </div>
+            
+            <div class="technology-grid">
+                <div class="tech-showcase">
+                    <div class="neural-network" id="neuralNetwork">
+                        <div class="network-layer input">
+                            <div class="neuron" data-type="text"></div>
+                            <div class="neuron" data-type="image"></div>
+                            <div class="neuron" data-type="video"></div>
+                            <div class="neuron" data-type="audio"></div>
+                        </div>
+                        <div class="network-layer hidden">
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                        </div>
+                        <div class="network-layer output">
+                            <div class="neuron authentic"></div>
+                            <div class="neuron fake"></div>
+                        </div>
+                        <div class="network-connections" id="networkConnections"></div>
+                    </div>
+                </div>
+                
+                <div class="tech-cards">
+                    <div class="tech-card" id="geminiCard">
+                        <div class="tech-icon">🧠</div>
+                        <h3>Gemini 2.0 Flash</h3>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">96.8%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">0.8s</span>
+                                <span class="stat-label">Speed</span>
+                            </div>
+                        </div>
+                        <p>Advanced multimodal analysis with deep language understanding</p>
+                    </div>
+                    
+                    <div class="tech-card" id="visionCard">
+                        <div class="tech-icon">👁️</div>
+                        <h3>Vision AI Pro</h3>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">94.2%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">1.2s</span>
+                                <span class="stat-label">Speed</span>
+                            </div>
+                        </div>
+                        <p>Deepfake and image manipulation detection technology</p>
+                    </div>
+                    
+                    <div class="tech-card" id="blockchainCard">
+                        <div class="tech-icon">⛓️</div>
+                        <h3>Blockchain Verification</h3>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">Immutable</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">2.1s</span>
+                                <span class="stat-label">Verification</span>
+                            </div>
+                        </div>
+                        <p>Tamper-proof content verification and audit trails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Network -->
+    <section id="community" class="community-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Community Defense Network</h2>
+                <p class="section-subtitle">Join thousands of defenders fighting misinformation together</p>
+            </div>
+            
+            <div class="community-grid">
+                <div class="community-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number" data-target="156000">0</div>
+                        <div class="stat-label">Active Defenders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-number" data-target="23400">0</div>
+                        <div class="stat-label">Verified Contributors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏛️</div>
+                        <div class="stat-number" data-target="45">0</div>
+                        <div class="stat-label">Government Partners</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-number" data-target="567">0</div>
+                        <div class="stat-label">Educational Partners</div>
+                    </div>
+                </div>
+                
+                <div class="network-visualization">
+                    <div class="network-container" id="networkContainer">
+                        <!-- Network visualization will be generated -->
+                    </div>
+                </div>
+                
+                <div class="join-community">
+                    <div class="join-card">
+                        <h3>Join the Fight Against Misinformation</h3>
+                        <p>Become part of India's largest community-driven fact-checking network</p>
+                        <div class="join-actions">
+                            <button class="join-button">
+                                <span>Join Network</span>
+                                <div class="join-glow"></div>
+                            </button>
+                            <button class="learn-button">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Modal -->
+    <div class="modal hidden" id="loadingModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="loading-animation">
+                <div class="ai-scanner">
+                    <div class="scanner-line"></div>
+                    <div class="scanner-grid"></div>
+                </div>
+                <div class="loading-text">
+                    <h3>AI Analysis in Progress</h3>
+                    <p id="loadingProgress">Initializing multimodal detection...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div class="modal hidden" id="resultsModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2>Detection Results</h2>
+                <button class="modal-close" onclick="hideModal('resultsModal')">✕</button>
+            </div>
+            <div class="modal-body" id="modalResults">
+                <!-- Results content will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

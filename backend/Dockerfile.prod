@@ -1,0 +1,50 @@
+# Production Dockerfile for TruthGuard AI Backend
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV POETRY_VERSION=1.6.1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    curl \
+    libpq-dev \
+    libffi-dev \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Poetry
+RUN pip install poetry==$POETRY_VERSION
+
+# Set work directory
+WORKDIR /app
+
+# Copy poetry files
+COPY pyproject.toml poetry.lock* /app/
+
+# Configure poetry: Don't create a virtual environment
+RUN poetry config virtualenvs.create false
+
+# Install dependencies
+RUN poetry install --only=main --no-dev
+
+# Copy application code
+COPY . /app/
+
+# Create non-root user
+RUN useradd --create-home --shell /bin/bash truthguard && \
+    chown -R truthguard:truthguard /app
+USER truthguard
+
+# Expose port
+EXPOSE 8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# Run the application
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080} --workers 4"]
